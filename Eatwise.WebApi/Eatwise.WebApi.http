@@ -1,0 +1,6 @@
+@Eatwise.WebApi_HostAddress = http://localhost:5157
+
+GET {{Eatwise.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
