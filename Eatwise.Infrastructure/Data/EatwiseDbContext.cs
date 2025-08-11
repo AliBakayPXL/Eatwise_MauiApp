@@ -44,6 +44,8 @@ namespace Eatwise.Infrastructure.Data
 
             modelBuilder.Entity<Ingredient>().Property(x => x.FatPer100g).HasColumnType("decimal (5, 2)");
             modelBuilder.Entity<Ingredient>().Property(x => x.SugarPer100g).HasColumnType("decimal (5, 2)");
+            modelBuilder.Entity<User>().Property(x => x.Weightkg)
+                .HasColumnType("decimal (5, 2)");
 
             modelBuilder.Entity<DishIngredient>().Property(x => x.QuantityGrams)
                 .HasColumnType("decimal (6, 1)");
