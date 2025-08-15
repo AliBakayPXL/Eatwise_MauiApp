@@ -1,5 +1,10 @@
 using Eatwise.Infrastructure.Data;
+using Eatwise.Domain.Interfaces;
+using Eatwise.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Eatwise.Application.Interfaces;
+using Eatwise.Application.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +18,14 @@ builder.Services.AddSwaggerGen();
 //Dependency Injection for DbContext
 builder.Services.AddDbContext<EatwiseDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//Repos DI
+builder.Services.AddScoped<IIngredientRepository, IngredientRepository>();
+builder.Services.AddScoped<IDishRepository, DishRepository>();
+builder.Services.AddScoped<IEatenItemRepository, EatenItemRepository>();
+//Services DI
+builder.Services.AddScoped<ICatalogService, CatalogService>();
+builder.Services.AddScoped<IDiaryService, DiaryService>();
+builder.Services.AddScoped<IHistoryService, HistoryService>();
 
 var app = builder.Build();
 

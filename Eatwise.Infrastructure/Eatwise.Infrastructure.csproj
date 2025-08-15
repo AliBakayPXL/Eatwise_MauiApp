@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Eatwise.Application\Eatwise.Application.csproj" />
     <ProjectReference Include="..\Eatwise.Domain\Eatwise.Domain.csproj" />
   </ItemGroup>
 
