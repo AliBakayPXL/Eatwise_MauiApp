@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Eatwise.Application\Eatwise.Application.csproj" />
+    <ProjectReference Include="..\Eatwise.Contracts\Eatwise.Contracts.csproj" />
     <ProjectReference Include="..\Eatwise.Infrastructure\Eatwise.Infrastructure.csproj" />
   </ItemGroup>
 
