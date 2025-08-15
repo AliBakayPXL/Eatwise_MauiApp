@@ -32,6 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,7 +45,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth\AuthResponse.cs" />
+    <Compile Include="Auth\GenderDto.cs" />
+    <Compile Include="Auth\GoalDto.cs" />
+    <Compile Include="Auth\LoginRequestDto.cs" />
+    <Compile Include="Auth\RegisterRequest.cs" />
+    <Compile Include="Auth\UserSummaryDto.cs" />
+    <Compile Include="Dishes\DishComponentDto.cs" />
+    <Compile Include="Dishes\DishDto.cs" />
+    <Compile Include="Dishes\IngredientPortionDto.cs" />
+    <Compile Include="Dishes\SaveDishRequest.cs" />
+    <Compile Include="Eaten\AddEatenItemRequest.cs" />
+    <Compile Include="Eaten\EatenItemDto.cs" />
+    <Compile Include="History\HistoryPointDto.cs" />
+    <Compile Include="Ingredients\IngredientDto.cs" />
+    <Compile Include="Ingredients\SaveIngredientsRequest.cs" />
+    <Compile Include="PagedResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

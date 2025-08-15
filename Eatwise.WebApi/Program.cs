@@ -1,5 +1,4 @@
 using Eatwise.Infrastructure.Data;
-using Eatwise.Domain.Interfaces;
 using Eatwise.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Eatwise.Application.Interfaces;
